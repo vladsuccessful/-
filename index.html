@@ -1,209 +1,252 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Владислав Ландер — бізнес-консалтинг</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Бізнес-консалтинг — Владислав Ландер</title>
 
-<style>
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+    }
 
-body {
-  background: #0f0f0f;
-  color: #e6e6e6;
-  line-height: 1.6;
-}
+    body {
+      background: #f6f6f6;
+      color: #111;
+      line-height: 1.6;
+    }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-  padding: 80px 20px;
-}
+    .container {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 80px 20px;
+    }
 
-h1 {
-  font-size: 42px;
-  font-weight: 600;
-  margin-bottom: 20px;
-}
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
 
-h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-}
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
 
-p {
-  color: #cfcfcf;
-  margin-bottom: 16px;
-}
+    .hero p {
+      font-size: 18px;
+      color: #444;
+      margin-bottom: 32px;
+    }
 
-.hero {
-  margin-bottom: 100px;
-}
+    .cta {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      border-radius: 2px;
+    }
 
-.hero p {
-  font-size: 18px;
-  max-width: 800px;
-}
+    .cta:hover {
+      opacity: 0.85;
+    }
 
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  margin-bottom: 120px;
-}
+    .hero img {
+      width: 100%;
+      max-width: 420px;
+      filter: grayscale(100%) contrast(1.1);
+    }
 
-.step {
-  background: #151515;
-  padding: 30px;
-  border-left: 3px solid #444;
-}
+    /* SECTIONS */
+    section {
+      margin-top: 120px;
+    }
 
-.step h3 {
-  margin-bottom: 12px;
-  font-size: 20px;
-}
+    h2 {
+      font-size: 32px;
+      margin-bottom: 40px;
+      font-weight: 600;
+    }
 
-.about {
-  display: grid;
-  grid-template-columns: 280px 1fr;
-  gap: 50px;
-  margin-bottom: 120px;
-  align-items: center;
-}
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
 
-.about img {
-  width: 100%;
-  border-radius: 6px;
-  filter: grayscale(100%);
-}
+    .step {
+      background: #fff;
+      padding: 32px;
+      border-left: 4px solid #000;
+    }
 
-.about h2 {
-  margin-bottom: 20px;
-}
+    .step h3 {
+      font-size: 20px;
+      margin-bottom: 12px;
+    }
 
-.contact {
-  background: #151515;
-  padding: 50px;
-  text-align: center;
-}
+    .step p {
+      color: #555;
+    }
 
-.contact p {
-  font-size: 18px;
-}
+    /* ABOUT */
+    .about {
+      max-width: 800px;
+    }
 
-.contact a {
-  color: #fff;
-  font-weight: 600;
-  text-decoration: none;
-  border-bottom: 1px solid #444;
-}
+    .about p {
+      font-size: 18px;
+      color: #333;
+    }
 
-.footer {
-  text-align: center;
-  font-size: 13px;
-  color: #777;
-  margin-top: 60px;
-}
+    /* CONTACT */
+    .contact {
+      background: #fff;
+      padding: 60px;
+      max-width: 600px;
+    }
 
-@media (max-width: 900px) {
-  .steps {
-    grid-template-columns: 1fr;
-  }
+    .contact a {
+      color: #000;
+      font-weight: 600;
+      text-decoration: none;
+    }
 
-  .about {
-    grid-template-columns: 1fr;
-    text-align: center;
-  }
+    .contact a:hover {
+      text-decoration: underline;
+    }
 
-  .about img {
-    max-width: 260px;
-    margin: auto;
-  }
-}
-</style>
+    /* FOOTER */
+    footer {
+      margin-top: 120px;
+      padding: 40px 20px;
+      text-align: center;
+      font-size: 14px;
+      color: #666;
+    }
+
+    footer a {
+      color: #000;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .hero img {
+        margin: 0 auto;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<div class="container hero">
-  <h1>
-    Швидке збільшення чистого прибутку вашого бізнесу<br>
-    та вивільнення вільного часу власника
-  </h1>
+  <div class="container">
 
-  <p>
-    Без мотиваційних промов. Без інфоциганства.  
-    Тільки холодний розбір бізнесу, цифр і рішень власника.
-  </p>
-</div>
+    <!-- HERO -->
+    <div class="hero">
+      <div>
+        <h1>
+          Швидке збільшення чистого прибутку вашого бізнеса<br>
+          та вивільнення вільного часу власника
+        </h1>
 
-<div class="container steps">
-  <div class="step">
-    <h3>Крок 1. Аудит бізнесу</h3>
-    <p>
-      Виявлення слабких місць, фінансових перекосів,
-      управлінських ілюзій і точок втрати грошей.
-    </p>
+        <p>
+          Холодний, раціональний консалтинг для власників бізнесу,
+          які приймають рішення, а не шукають мотивацію.
+        </p>
+
+        <a class="cta" href="https://t.me/yourtelegram">Звʼязатися в Telegram</a>
+      </div>
+
+      <div>
+        <img src="vladyslav_lander_consulting.jpg" alt="Владислав Ландер">
+      </div>
+    </div>
+
+    <!-- STEPS -->
+    <section>
+      <h2>Як я працюю</h2>
+
+      <div class="steps">
+        <div class="step">
+          <h3>Крок 1. Аудит бізнесу</h3>
+          <p>
+            Глибокий розбір бізнесу на виявлення слабких місць,
+            ілюзій та системних втрат.
+          </p>
+        </div>
+
+        <div class="step">
+          <h3>Крок 2. Розроблення стратегії</h3>
+          <p>
+            Формування чіткої стратегії з урахуванням реальних
+            проблем, ресурсів та ризиків.
+          </p>
+        </div>
+
+        <div class="step">
+          <h3>Крок 3. Впровадження</h3>
+          <p>
+            Покрокове впровадження необхідних рішень
+            без хаосу та «якось буде».
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section>
+      <h2>Про мене</h2>
+
+      <div class="about">
+        <p>
+          Мене звати <strong>Владислав Ландер</strong>.
+          Я підприємець з досвідом ведення бізнесу понад 16 років.
+          Продовжую активно вести власний бізнес, постійно навчаюсь
+          та працюю з реальними цифрами, а не теорією.
+          <br><br>
+          Я не продаю мотивацію, курси або «універсальні рішення».
+          Моя задача — допомогти власнику побачити реальну картину
+          та прийняти сильні управлінські рішення.
+        </p>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section>
+      <h2>Контакти</h2>
+
+      <div class="contact">
+        <p>
+          Телефон: <a href="tel:+380677974518">+38 (067) 797-45-18</a><br><br>
+          Telegram: <a href="https://t.me/yourtelegram">@yourtelegram</a>
+        </p>
+
+        <p class="oferta" style="margin-top:30px; font-size:14px; color:#555;">
+          Залишаючи контактні дані, ви погоджуєтесь з умовами
+          <a href="oferta.pdf" target="_blank" rel="noopener">публічної оферти</a>.
+        </p>
+      </div>
+    </section>
+
   </div>
 
-  <div class="step">
-    <h3>Крок 2. Розроблення стратегії</h3>
-    <p>
-      Побудова реалістичної моделі дій з урахуванням
-      оборотних коштів, ризиків і реальних можливостей.
-    </p>
-  </div>
-
-  <div class="step">
-    <h3>Крок 3. Впровадження</h3>
-    <p>
-      Покрокове впровадження необхідних змін
-      без хаосу, зайвих рухів і “порад заради порад”.
-    </p>
-  </div>
-</div>
-
-<div class="container about">
-  <img src="vladyslav_lander_v2.jpg" alt="Владислав Ландер">
-
-  <div>
-    <h2>Про мене</h2>
-
-    <p>
-      Мене звати Владислав Ландер. Я підприємець із понад
-      16-річним досвідом ведення бізнесу.
-    </p>
-
-    <p>
-      Я не теоретик і не консультант “з книжок”.
-      Я продовжую вести власний бізнес, постійно навчаюся
-      та перевіряю всі рішення на практиці.
-    </p>
-
-    <p>
-      Працюю з власниками, які готові дивитися на свій бізнес
-      тверезо, приймати відповідальність і рахувати наслідки.
-    </p>
-  </div>
-</div>
-
-<div class="container contact">
-  <p>
-    Зв’язок напряму:<br><br>
-    📞 <a href="tel:+380677974518">+380 67 797 45 18</a>
-  </p>
-
-  <div class="footer">
-    Публічна оферта. Консультаційні послуги.  
-  </div>
-</div>
+  <footer>
+    © Владислав Ландер · Бізнес-консалтинг
+  </footer>
 
 </body>
 </html>
-
-
